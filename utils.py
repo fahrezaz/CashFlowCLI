@@ -1,5 +1,5 @@
 import json
-``
+
 def baca_data(nama_file):
     with open(nama_file, "r") as file:
         return json.load(file)
