@@ -1,9 +1,8 @@
 from akun import registrasi, login, profil, logout
 
-
 def menu_awal():
     while True:
-        print("\n=== CASHFLOW ===")
+        print("\n===== CASHFLOW =====")
         print("Sistem Pengelolaan Keuangan Pribadi")
         print("\n1. Registrasi")
         print("2. Login")
@@ -25,12 +24,12 @@ def menu_awal():
             break
 
         else:
-            print("Pilihan tidak tersedia!")
+            print("Pilihan tidak tersedia!\n")
 
 
 def menu_utama(user):
     while True:
-        print("\n=== MENU UTAMA ===")
+        print("\n===== MENU UTAMA =====")
         print(f"Halo, {user['nama_user']}!")
         print("\n1. Profil")
         print("2. Logout")
@@ -45,7 +44,6 @@ def menu_utama(user):
             break
 
         else:
-            print("Pilihan tidak tersedia!")
-
+            print("Pilihan tidak tersedia!\n")
 
 menu_awal()
