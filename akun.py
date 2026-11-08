@@ -7,7 +7,7 @@ FILE_USERS = "data/users.json"
 def registrasi():
     users = baca_data(FILE_USERS)
 
-    print("\n=== REGISTRASI ===")
+    print("\n===== REGISTRASI =====")
 
     nama = input("Nama lengkap : ")
     username = input("Username     : ")
@@ -17,6 +17,7 @@ def registrasi():
     for user in users:
         if user["username"] == username:
             print("Username sudah digunakan!")
+            print("Silahkan lakukan registrasi ulang!")
             return
 
     if len(users) == 0:
@@ -36,12 +37,13 @@ def registrasi():
     simpan_data(FILE_USERS, users)
 
     print("Registrasi berhasil!")
+    print("Silahkan untuk login di menu Login")
 
 
 def login():
     users = baca_data(FILE_USERS)
 
-    print("\n=== LOGIN ===")
+    print("\n===== LOGIN =====")
 
     username = input("Username : ")
     password = input("Password : ")
@@ -56,7 +58,7 @@ def login():
 
 
 def profil(user):
-    print("\n=== PROFIL ===")
+    print("\n===== PROFIL =====")
     print(f"ID User  : {user['id_user']}")
     print(f"Nama     : {user['nama_user']}")
     print(f"Username : {user['username']}")
